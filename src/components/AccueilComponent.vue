@@ -1,6 +1,6 @@
 <template>
-    <div>
-        Welcome {{ user.firstName }} {{ user.lastName }}
+    <div class="welcome-container">
+        <h1 class="welcome-title">Welcome <span class="highlight">{{ user.prenom }} {{ user.nom }}</span> de {{ user.age }} ans</h1>
     </div>
 </template>
 
@@ -16,3 +16,7 @@
         }
     }
 </script>
+
+<style scoped>
+    @import './Component.css';
+</style>

@@ -1,8 +1,9 @@
 <template>
-    <div>
-        <input v-model="firstName" placeholder="Prénom">
-        <input v-model="lastName" placeholder="Nom">
-        <button @click="login">Connexion</button>
+    <div class="login-container">
+        <input v-model="prenom" placeholder="Prénom" class="login-input">
+        <input v-model="nom" placeholder="Nom" class="login-input">
+        <input v-model="age" placeholder="Age" class="login-input">
+        <button @click="login" class="login-button">Connexion</button>
     </div>
 </template>
 
@@ -10,15 +11,21 @@
     export default {
         data() {
             return {
-                firstName: '',
-                lastName: ''
+                prenom: '',
+                nom: '',
+                age:''
             }
         },
         methods: {
             login() {
-                this.$store.commit('setUser', { firstName: this.firstName, lastName: this.lastName });
+                this.$store.commit('setUser', { prenom: this.prenom, nom: this.nom, age: this.age });
                 this.$router.push('/accueil');
             }
         }
     }
 </script>
+
+<style scoped>
+    @import './Component.css';
+</style>
+
