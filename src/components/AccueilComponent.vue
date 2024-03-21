@@ -1,6 +1,6 @@
 <template>
     <div class="welcome-container">
-        <h1 class="welcome-title">Welcome <span class="highlight">{{ user.prenom }} {{ user.nom }}</span> de {{ user.age }} ans</h1>
+        <h1 class="welcome-title">Welcome <span class="highlight">{{ user.prenom }} {{ user.nom }}</span> de <span class="highlight"> {{ user.age }} </span> ans</h1>
     </div>
 </template>
 

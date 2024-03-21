@@ -1,9 +1,9 @@
 <template>
     <div class="login-container">
-        <input v-model="prenom" placeholder="Prénom" class="login-input">
-        <input v-model="nom" placeholder="Nom" class="login-input">
-        <input v-model="age" placeholder="Age" class="login-input">
-        <button @click="login" class="login-button">Connexion</button>
+        <input class="login-input" v-model="prenom" placeholder="Prénom" >
+        <input class="login-input" v-model="nom" placeholder="Nom">
+        <input class="login-input" v-model.number="age" type="number" placeholder="Age">
+        <button class="login-button" @click="login" >Connexion</button>
     </div>
 </template>
 
